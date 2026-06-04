@@ -1,0 +1,35 @@
+# VirtualShop Configuration
+
+# World where shops can be created
+shop-world: "SMPspawn"
+
+# Spawn teleport location
+spawn-location:
+  world: "SMPspawn"
+  x: 8
+  y: 17
+  z: 5
+
+# Shop teleport location
+shop-location:
+  world: "SMPspawn"
+  x: -10
+  y: 24
+  z: 313
+
+# Teleport countdown (seconds)
+teleport-countdown: 3
+
+# Buy cooldown (ticks, 20 ticks = 1 second)
+buy-cooldown-ticks: 20
+
+# Hologram settings (used when FancyHolograms is NOT installed)
+hologram:
+  # Lines shown above the shop stand
+  # Placeholders: {id}, {price}
+  lines:
+    - "&8[ &a{id} &8]"
+    - "&7Ár: &a{price}$"
+    - "&7Jobb klikk a vásárláshoz"
+  # Y offset above the armor stand
+  y-offset: 1.8

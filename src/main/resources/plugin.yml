@@ -1,0 +1,57 @@
+name: VirtualShop
+version: 1.0.0
+main: dev.virtualshop.VirtualShopPlugin
+api-version: 1.21
+description: Virtual armor stand shop plugin with FancyHologram support
+authors: [VirtualShop]
+depend: [Vault]
+softdepend: [FancyHolograms]
+
+commands:
+  shopitemsave:
+    description: Save an item to the shop item registry
+    usage: /shopitemsave <id>
+    permission: virtualshop.admin
+
+  shopgive:
+    description: Give a saved shop item to yourself
+    usage: /shopgive <id>
+    permission: virtualshop.admin
+
+  shopcreate:
+    description: Create a virtual shop stand
+    usage: /shopcreate <id> <price>
+    permission: virtualshop.admin
+
+  shopremove:
+    description: Remove a virtual shop stand
+    usage: /shopremove <id>
+    permission: virtualshop.admin
+
+  shoplist:
+    description: List all virtual shops
+    usage: /shoplist
+    permission: virtualshop.admin
+
+  shopmove:
+    description: Move a shop to your current location
+    usage: /shopmove
+    permission: virtualshop.admin
+
+  shopprice:
+    description: Set a new price for a shop
+    usage: /shopprice <price>
+    permission: virtualshop.admin
+
+  spawn:
+    description: Teleport to spawn
+    usage: /spawn
+
+  shop:
+    description: Teleport to shop
+    usage: /shop
+
+permissions:
+  virtualshop.admin:
+    description: Access to all admin shop commands
+    default: op
