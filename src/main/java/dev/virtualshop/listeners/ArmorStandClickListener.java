@@ -3,6 +3,7 @@ package dev.virtualshop.listeners;
 import dev.virtualshop.VirtualShopPlugin;
 import dev.virtualshop.manager.ShopEntry;
 import dev.virtualshop.util.ColorUtil;
+import net.kyori.adventure.text.serializer.legacy.LegacyComponentSerializer;
 import org.bukkit.Material;
 import org.bukkit.entity.ArmorStand;
 import org.bukkit.entity.Player;
@@ -50,7 +51,8 @@ public class ArmorStandClickListener implements Listener {
 
     private void handleBuy(Player player, String id) {
         if (plugin.getShopManager().hasBuyCooldown(player.getUniqueId())) {
-            player.sendActionBar(ColorUtil.color("<##ff4d4d>Várj egy pillanatot a következő vásárlás előtt."));
+            player.sendActionBar(LegacyComponentSerializer.legacySection().deserialize(
+                    ColorUtil.color("<##ff4d4d>Várj egy pillanatot a következő vásárlás előtt.")));
             return;
         }
 
